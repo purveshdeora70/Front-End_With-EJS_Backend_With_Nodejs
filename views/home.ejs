@@ -1,0 +1,51 @@
+<%- include('partials/header') %>
+
+<div class=" centered">
+  <div class="container">
+    <h1 class="display-3 heading"> <i class="fas fa-solid fa-building"></i> IT Company</h1>
+    <p class="lead">Employees details.</p>
+    <hr>
+
+    <form action="delete" method="post">
+
+      <table class="css-serial">
+        <tr>
+          <th>Sr No.</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+
+        <% foundEmployee.forEach(employee => { %>
+        <tr>
+          <td></td>
+          <td><%= employee.fName %></td>
+          <td><%= employee.lName %></td>
+          <td><%= employee.age %></td>
+          <td><%= employee.gender %></td>
+          <td><%= employee.number %></td>
+          <td><%= employee.email%></td>
+          <td><input type="checkbox" name="checkbox" id="check" value="<%= employee._id %>"></td>
+
+        </tr>
+        <% }); %>
+
+
+
+      </table>
+
+      <a class="btn btn-dark btn-lg" href="/submit" role="button">Enter New Employee</a>
+      <button type="submit" class="btn btn-dark btn-lg">
+        <i class="fas fa-trash fa-circle"></i> Delete Emplyee
+      </button>
+    </form>
+
+
+  </div>
+</div>
+
+<%- include('partials/footer') %>

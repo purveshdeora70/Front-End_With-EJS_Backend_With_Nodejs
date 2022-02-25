@@ -1,0 +1,77 @@
+.centered {
+    background-color: #ddf3f5;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.secret-text {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #000;
+}
+
+.lead {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.heading {
+    font-weight: 500;
+}
+
+body {
+    background-color: #ddf3f5;
+}
+
+
+.email {
+    text-align: left;
+    padding-right: 35px;
+}
+
+.number {
+    padding-right: 18px;
+}
+
+.age {
+    padding-right: 50px;
+}
+
+.gender {
+    padding-right: 25px;
+}
+
+input {
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+    /* color: black; */
+}
+
+
+.css-serial {
+    counter-reset: serial-number;  /* Set the serial number counter to 0 */
+  }
+  
+  .css-serial td:first-child:before {
+    counter-increment: serial-number;  /* Increment the serial number counter */
+    content: counter(serial-number);  /* Display the counter */
+  }
